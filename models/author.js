@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var Schema = mongoose.schema;
+var Schema = mongoose.Schema;
 
 var AuthorSchema = new Schema(
 	{
@@ -27,4 +27,4 @@ AuthorSchema.virtual("url").get(function () {
 	return "/catalog/author/" + this._id;
 })
 
-module.exports = mongoose.module("Author", AuthorSchema);
+module.exports = mongoose.model("Author", AuthorSchema);
